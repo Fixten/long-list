@@ -21,14 +21,10 @@ export function List() {
               typeOfTarget === "high" ? onHighIntersect : onLowIntersect
             }
           >
-            <p>
-              {typeOfTarget} {v.id}
-            </p>
+            {v.node}
           </ListItemWithObserver>
         ) : (
-          <ListItem key={v.id}>
-            <p>{v.id}</p>
-          </ListItem>
+          <ListItem key={v.id}>{v.node}</ListItem>
         );
       })}
     </ul>

@@ -18,9 +18,5 @@ export function ListItemWithObserver(props: Props) {
     if (isIntersecting) onIntersect();
   }, [isIntersecting, onIntersect]);
 
-  return (
-    <ListItem ref={ref}>
-      <div style={{ background: "red" }}>{children}</div>
-    </ListItem>
-  );
+  return <ListItem ref={ref}>{children}</ListItem>;
 }
